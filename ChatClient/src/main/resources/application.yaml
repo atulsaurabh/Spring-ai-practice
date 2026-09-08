@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ChatClient
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    mcp:
+      client:
+        enabled: true
+        streamable-http:
+          connections:
+            local-mcp:
+              url: http://localhost:8081
+              endpoint: /mcp
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=aichatclient
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
