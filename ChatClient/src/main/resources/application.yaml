@@ -4,6 +4,14 @@ spring:
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334
+        use-tls: false
+        collection-name: movie-collection
+        content-field-name: text
+        initialize-schema: true
     mcp:
       client:
         enabled: true

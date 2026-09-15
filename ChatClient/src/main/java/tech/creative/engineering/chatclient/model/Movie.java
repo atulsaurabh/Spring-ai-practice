@@ -12,4 +12,5 @@ public class Movie
     private String releaseDate;
     private String genre;
     private String description;
+    private String revenue;
 }
